@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index2.css">
+    <link rel="stylesheet" href="contactcss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+</head>
+
+<nav>
+    <input type="checkbox" id="check" style="padding: 0 100px; margin-bottom: 0;">
+    <zesty for="check" class="checkbtn" style="padding: 0; margin: 0;">
+      <i class="fas fa-bars"></i>
+    </zesty>
+    <zesty class="logo" style="padding: 10px;"> <a href="index.html"><img src="https://i.imgur.com/qAEohwE.png"
+      width="80px"
+      height="80px" 
+      alt="logo"></zesty>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contactpage.html">Contact</a></li>
+          </ul>
+  </nav>
+
+
+<body>
+    <div class="container">
+        <h1>Have a question or interested in work? Let's talk</h1>
+        <div class="contact-box">
+            <div class="contact-left">
+                <h3>Send your request</h3>
+                <form>
+
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Name</label>
+                            <input type="text" placeholder="John Doe">
+                        </div>
+                        <div class="input-group">
+                            <label>Phone</label>
+                            <input type="text" placeholder="+1 123-456-7890">
+                        </div>
+
+                    </div>
+                    
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="youremail@gmail.com">
+                        </div>
+                        <div class="input-group">
+                            <label>Service Needed</label>
+                            <input type="text" placeholder="Problem">
+                        </div>
+
+                    </div>
+
+                    <label>Message</label>
+                    <textarea rows="5" placeholder="Your Message"></textarea>
+
+                    <button type="submit">SEND</button>
+                </form>
+            </div>
+            <div class="contact-right">
+                <h3>Reach us</h3>
+                
+                <table>
+                    <tr>
+                        <td>Email</td>
+                        <td>completemaintenancerepair@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>N/A</td>
+                    </tr>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <!DOCTYPE html>
+    <html lang=”en”>
+    <head>
+    <title></title>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+    </head>
+      
+    <body>
+    
+    <h1>HTML Form That Opens Email Client </h1>
+      
+    <p>This form opens up the submitter's email client, prompting them to send you a copy of their responses. </p>
+     
+    <!--Form Code--> 
+    <form action=”mailto:contact@yourdomain.com”
+    
+    
+    method=”POST”
+    
+    
+    enctype=”text/plain”
+    
+    
+    name=”EmailForm”>
+    
+    
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    
+    
+    <label for="ContactCommentt">Message:</label><br>
+    <textarea id=”ContactCommentt” rows=”6″ cols=”20″>
+    
+    <input type="submit" value="Send">
+    </form>
+     </body>

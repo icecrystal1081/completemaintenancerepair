@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+<style>
+   
+
+
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: #e87722;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 20px 16px;
+  background-color: lightgray;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+
+.btn.active {
+  background-color: #03244d;
+  color: white;
+}
+
+
+
+</style>
+</head>
+<nav>
+  <input type="checkbox" id="check">
+  <label for="check" class="checkbtn">
+    <i class="fas fa-bars"></i>
+  </label>
+
+    <label class="logo"> <a href="index.html"><img src="https://i.imgur.com/qAEohwE.png"
+    width="80px"
+    height="80px" 
+    alt="logo"></label>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contactpage.html">Contact</a></li>
+  </ul>
+</nav>
+<section></section>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+   <p>‎ </p>
+   <p>‎ </p>
+   <p>‎ </p>
+   
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('deckandporch')"> Deck and Porch</button>
+  <button class="btn" onclick="filterSelection('drywall')"> Drywall</button>
+  <button class="btn" onclick="filterSelection('fence')"> Fence</button>
+  <button class="btn" onclick="filterSelection('kitchen')"> Kitchen</button>
+  <button class="btn" onclick="filterSelection('general')"> Maintenace, Repair, Remodel, and Refurbishing</button>
+  <button class="btn" onclick="filterSelection('plumbing')"> Plumbing</button>
+  <button class="btn" onclick="filterSelection('tileandflooring')"> Tile and Flooring</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column deckandporch">
+    <div class="content">
+      <img src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" alt="deckandporch" style="width:100%">
+      <h4>Custom Deck</h4>
+      <p>Custom deck made of wood on a very small slope leading to drains.</p>
+    </div>
+  </div>
+  <div class="column kitchen">
+    <div class="content">
+    <img src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" alt="kitchen" style="width:100%">
+      <h4>Kitchen Remodel</h4>
+      <p>Custom cabinets with new counters and a never ending backdrop.</p>
+    </div>
+  </div>
+  <div class="column nature">
+    <div class="content">
+    <img src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" alt="Nature" style="width:100%">
+      <h4>Forest</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  
+  <div class="column cars">
+    <div class="content">
+      <img src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" alt="Car" style="width:100%">
+      <h4>Retro</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" alt="Car" style="width:100%">
+      <h4>Fast</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+    <img src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" alt="Car" style="width:100%">
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <img src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" alt="Car" style="width:100%">
+      <h4>Girl</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" alt="Car" style="width:100%">
+      <h4>Man</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" alt="Car" style="width:100%">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
+
+<link rel="stylesheet" type="text/css" href="index2.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
